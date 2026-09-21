@@ -37,9 +37,3 @@ uv run --python 3.11 python scripts/run_notebook.py /path/to/ebay_boys_girls_shi
 This executes every solution code cell with real images, 32 training images per class, and one epoch per neural-network fit. It checks loading, training, prediction, plots, metrics, and answer export. Temporary plots and exports do not overwrite the submitted answers. Add `--full` to use the notebook's original dataset sizes and training epochs; that takes substantially more time and memory. A bounded run is not a reproduction of the submitted accuracy scores.
 
 The notebook also runs interactively: set the `SHIRTS_DATASET` environment variable before opening it. Its TensorFlow/Keras calls and image conversion support the pinned environment above. The image dataset is not bundled with this repository.
-
-For a quick notebook-format check:
-
-```sh
-uv run python scripts/check_notebooks.py
-```
