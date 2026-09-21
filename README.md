@@ -1,16 +1,12 @@
 # BSc Intro Data Science - HW10 CNN Classification
 
-A historical archive of my CS BSc coursework.
+- Course: BSc Computer Science.
+- Available copy: 2019.
+- Supplied exercise material is identified separately below.
 
 ## Contents
 
 Neural-network coursework covering dense and convolutional models for image classification, including evaluation and bonus model exploration.
-
-## Provenance
-
-- Era: CS BSc.
-- Last recovered work: 2019 archive copy.
-- Supplied exercise material is identified separately below.
 
 ## Files
 
