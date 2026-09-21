@@ -1,8 +1,6 @@
 # BSc Intro Data Science - HW10 CNN Classification
 
 - Course: BSc Computer Science.
-- Available copy: 2019.
-- Supplied exercise material is identified separately below.
 
 ## Contents
 
@@ -28,18 +26,20 @@ My submitted answers:
 - Main Python packages: keras, matplotlib, numpy, pandas, requests, scikit-image, scikit-learn, tensorflow, notebook.
 - Jupyter-compatible local review flow.
 
-## Dataset Notes
+## Run
 
-The original course folders for several data-science assignments contained the large `ebay_boys_girls_shirts` image dataset and tarball. Those files are not tracked in this repository. The recovered notebooks reference the course download URL and recreate the dataset folder when that URL is still available.
+Use Python 3.11 and `uv`. Supply the extracted `ebay_boys_girls_shirts` course dataset (the directory containing the four train/test CSV files and the `boys/` and `girls/` images):
 
-## Notes
-
-- The notebook uses older TensorFlow/Keras APIs and may require a legacy Python/TensorFlow environment for full reruns.
-
-## Validate
-
-```bash
-python3 scripts/check_notebooks.py
+```sh
+uv run --python 3.11 python scripts/run_notebook.py /path/to/ebay_boys_girls_shirts
 ```
 
-This check verifies that notebooks parse as JSON and that the removed student identifier does not remain in tracked text files.
+This executes every solution code cell with real images, 32 training images per class, and one epoch per neural-network fit. It checks loading, training, prediction, plots, metrics, and answer export. Temporary plots and exports do not overwrite the submitted answers. Add `--full` to use the notebook's original dataset sizes and training epochs; that takes substantially more time and memory. A bounded run is not a reproduction of the submitted accuracy scores.
+
+The notebook also runs interactively: set the `SHIRTS_DATASET` environment variable before opening it. Its TensorFlow/Keras calls and image conversion support the pinned environment above. The image dataset is not bundled with this repository.
+
+For a quick notebook-format check:
+
+```sh
+uv run python scripts/check_notebooks.py
+```
